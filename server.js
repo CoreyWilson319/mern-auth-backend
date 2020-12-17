@@ -8,7 +8,7 @@ require('./config/passport')
 const PORT = process.env.PORT || 8000;
 
 // API
-const users = require('./api/user')
+const users = require('./api/users')
 
 // Middleware
 app.use(cors());
