@@ -5,6 +5,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const passport = require('passport')
+const db = require('../models')
 
 // Models
 const User = require('../models/User')
@@ -37,7 +38,7 @@ router.post('/register', (req, res) => {
                     // Change the password in newUser to the hash
                     newUser.password = hash;
                     newUser.save()
-                    .then(createUser => res.json(createdUser))
+                    .then(createdUser => res.json(createdUser))
                     .catch(err2 => console.log(err2))
                 })
             })
