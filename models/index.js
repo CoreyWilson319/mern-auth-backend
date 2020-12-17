@@ -9,7 +9,7 @@ mongoose.connect(keys.MONGO_URI, {
   useFindAndModify: true,
 });
 
-console.log(process.env.MONGOURI)
+console.log(process.env.MONGO_URI)
 // Mongoose connection object
 const db = mongoose.connection;
 
