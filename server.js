@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     res.status(200).json({ message: "Smile, you're being watched by the Backend Engineering Team"})
 });
 
-app.use(require('./api/users'), users)
+app.use('/api/users', users)
 
 app.listen(PORT, () => {
     console.log(`Server is running on PORT: ${PORT}`)
